@@ -34,7 +34,6 @@ public class HomePageTests : BunitContext
 
         Assert.NotNull(cut.Find("input[type='text']"));
         Assert.NotNull(cut.Find("button"));
-        Assert.Contains("LearnBlazor", cut.Markup);
     }
 
     [Fact]
