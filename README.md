@@ -1,4 +1,4 @@
-# learnwasm
+# learnblazor
 
 A Blazor Server web application built with .NET 10 that provides a web interface for searching [Microsoft Learn](https://learn.microsoft.com) documentation via the [Learn MCP Server](https://learn.microsoft.com/api/mcp).
 
@@ -42,3 +42,9 @@ learnwasm.Tests/            # xUnit + bUnit test project
 - **.NET 10**
 - **xUnit** and **bUnit** for testing
 - **GitHub Actions** for CI/CD to Azure
+
+## Deployment
+
+The app is deployed to [Azure App Service](https://learnblazor.azurewebsites.net/) via GitHub Actions (`.github/workflows/main_learnblazor.yml`).
+
+The Azure Web App has a startup command configured: `dotnet learnwasm.dll`. This is required because the publish output would otherwise be ambiguous to the runtime.
